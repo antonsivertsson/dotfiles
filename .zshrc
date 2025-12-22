@@ -9,6 +9,7 @@ alias ll='ls -lF'
 alias la='eza -al'
 alias l='eza -1'
 alias splay='spotify_player'
+alias dotgit='lazygit -w ~ -g ~/.dotfiles'
 #alias lsd='ls -T -L 2'
 lsd() {
     if [[ "$1" =~ ^-[0-9]+$ ]]; then
