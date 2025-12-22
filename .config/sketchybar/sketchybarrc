@@ -1,0 +1,76 @@
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+source "$CONFIG_DIR/colors.sh"
+
+sketchybar --bar corner_radius=7 margin=8 y_offset=5 position=top height=30 blur_radius=30 color=$BAR_COLOR
+
+default=(
+  padding_left=2
+  padding_right=2
+  icon.font="FiraCode Nerd Font:Regular:17.0"
+  label.font="FiraCode Nerd Font:Regular:14.0"
+  icon.color=$ICON_COLOR
+  label.color=$LABEL_COLOR
+  icon.padding_left=4
+  icon.padding_right=4
+  label.padding_left=4
+  label.padding_right=4
+)
+sketchybar --default "${default[@]}"
+
+sketchybar --add event aerospace_workspace_change
+sketchybar --add event aerospace_focus_change
+
+# Aerospace workspaces
+WORKSPACES=("Q" "W" "E" "A" "S" "D") 
+
+for sid in "${WORKSPACES[@]}"; do
+  case "$sid" in
+        "Q") ICON="" ;;
+        "W") ICON="" ;;
+        "E") ICON="󰠮" ;;
+        "A") ICON="󰆍" ;;
+        "S") ICON="" ;;
+        "D") ICON="󰘨" ;;
+        *) ICON="$sid" ;;
+    esac
+
+  sketchybar --add item space.$sid left \
+    --subscribe space.$sid aerospace_workspace_change \
+    --set space.$sid \
+      background.color=0x00000000 \
+      background.corner_radius=0 \
+      background.height=30 \
+      background.drawing=on \
+      icon="$ICON" \
+      icon.padding_left=10 \
+      icon.padding_right=10 \
+      label.drawing=off \
+      click_script="aerospace workspace $sid" \
+      script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+
+    if [ "$sid" = "E" ]; then
+      sketchybar --add item separator.$sid left \
+        --set separator.$sid \
+        icon="" \
+        icon.font="FiraCode Nerd Font:Regular:12.0" \
+        icon.color=$ICON_COLOR \
+        background.drawing=off
+    fi
+  done
+
+sketchybar --add item title center \
+          --set title script="$PLUGIN_DIR/program_title.sh" \
+          label="$(aerospace list-windows --focused --format "%{app-name}")" \
+          --subscribe title aerospace_focus_change
+
+sketchybar --add item clock right \
+           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change \
+           --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
+
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
