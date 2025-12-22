@@ -2,11 +2,6 @@ return {
   "folke/snacks.nvim",
   opts = {
     explorer = { enabled = false }, -- Disable explorer
-    terminal = {
-      win = {
-        position = "float",
-      },
-    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)
