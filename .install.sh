@@ -21,4 +21,11 @@ fi
 
 echo "Installing homebrew packages..."
 brew bundle --file "$HOME/.setup_brewfile"
+
+echo "Updating Mac specific settings..."
+
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write com.apple.finder ShowStatusBar -bool false
+defaults write com.apple.dock autohide -bool true
+
 echo "Done!"
