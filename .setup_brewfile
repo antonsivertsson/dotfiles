@@ -1,1 +1,28 @@
+# Tap formulae
+tap "FelixKratz/formulae"
+
+# Install tools
 brew "bat"
+brew "neovim"
+brew "lazygit"
+brew "starship"
+brew "zsh-autosuggestions"
+brew "zsh-fast-syntax-highlighting"
+brew "jq"
+brew "borders"
+brew "sketchybar"
+brew "ripgrep"
+brew "eza"
+brew "dooit"
+brew "fzf"
+brew "fastfetch"
+brew "nvm"
+brew "lazysql"
+
+# install apps
+cask "kitty"
+cask "nikitabobko/tap/aerospace"
+
+# Install fonts
+cask "font-hack-nerd-font"
+

@@ -19,9 +19,6 @@ else
   echo "🍺 Homebrew already installed"
 fi
 
-# Tap required formulae
-brew tap FelixKratz/formulae
-
 echo "Installing homebrew packages..."
 brew bundle --file "$HOME/.setup_brewfile"
 echo "Done!"
