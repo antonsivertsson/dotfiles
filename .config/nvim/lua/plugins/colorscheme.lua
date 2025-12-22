@@ -1,18 +1,3 @@
--- -- return {
---   {
---     -- "folke/tokyonight.nvim",
---     "sainnhe/everforest.nvim",
---     opts = {
---       transparent = true,
---       styles = {
---         sidebars = "transparent",
---         floats = "transparent",
---       },
---     },
---   },
--- }
---
-
 local function set_normal_float_highlight()
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 end
