@@ -4,10 +4,10 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 eval "$(direnv hook zsh)"  # For Zsh
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-alias ls='eza --icons -F -H --group-directories-first --git'
+alias ls='eza -H --group-directories-first --git'
 alias ll='ls -lF'
 alias la='eza -al'
-alias l='eza -1'
+alias l='eza -1 --group-directories-first'
 alias dotgit='lazygit -w ~ -g ~/.dotfiles'
 lsd() {
     if [[ "$1" =~ ^-[0-9]+$ ]]; then
