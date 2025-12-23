@@ -2,6 +2,11 @@ return {
   "folke/snacks.nvim",
   opts = {
     explorer = { enabled = false }, -- Disable explorer
+    indent = {
+      indent = {
+        only_scope = true,
+      },
+    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)
