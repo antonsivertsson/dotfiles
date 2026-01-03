@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.files",
+  "nvim-mini/mini.files",
   priority = 1000,
   keys = {
     {
