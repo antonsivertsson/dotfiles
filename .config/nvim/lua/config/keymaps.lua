@@ -13,3 +13,5 @@ vim.keymap.set(
   ":<C-u>MoltenEvaluateVisual<CR>gv",
   { silent = true, desc = "evaluate visual selection" }
 )
+vim.keymap.set("i", "<M-BS>", "<C-w>")
+vim.keymap.set("i", "<CMD-BS>", "<C-u>")
