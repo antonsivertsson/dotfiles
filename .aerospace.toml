@@ -3,7 +3,7 @@
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = ['exec-and-forget sketcybar', 'exec-and-forget borders active_color="gradient(top_left=0xffffbf00,bottom_right=0xffff7f50)" width=3.0 inactive_color=0xff494d64']
+after-startup-command = ['exec-and-forget sketcybar', 'exec-and-forget borders active_color="gradient(top_left=0xffffbf00,bottom_right=0xffff7f50)" width=5.0 inactive_color=0xff494d64']
 
 on-focus-changed = [ 'exec-and-forget sketchybar --trigger aerospace_focus_change' ]
 exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE']
