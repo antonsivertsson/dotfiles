@@ -15,3 +15,19 @@ vim.keymap.set(
 )
 vim.keymap.set("i", "<M-BS>", "<C-w>")
 vim.keymap.set("i", "<CMD-BS>", "<C-u>")
+
+-- Disable autocomplete in buffer
+vim.keymap.set("n", "<leader>ue", function()
+  local disabled = vim.b.cmp_disabled or false
+  vim.b.cmp_disabled = not disabled
+
+  require("cmp").setup.buffer({
+    enabled = not vim.b.cmp_disabled,
+  })
+
+  if vim.b.cmp_disabled then
+    vim.notify("Autocomplete disabled in this buffer", vim.log.levels.INFO)
+  else
+    vim.notify("Autocomplete enabled in this buffer", vim.log.levels.INFO)
+  end
+end, { desc = "Toggle cmp autocomplete in current buffer" })
