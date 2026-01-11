@@ -31,3 +31,7 @@ vim.keymap.set("n", "<leader>ue", function()
     vim.notify("Autocomplete enabled in this buffer", vim.log.levels.INFO)
   end
 end, { desc = "Toggle cmp autocomplete in current buffer" })
+
+-- Center screen when moving up down
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
