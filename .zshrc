@@ -4,6 +4,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 eval "$(direnv hook zsh)"  # For Zsh
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+export EZA_CONFIG_DIR="$HOME/.config/eza/"
 alias ls='eza -H --group-directories-first --git'
 alias ll='ls -lF'
 alias la='eza -al'

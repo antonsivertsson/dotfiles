@@ -1,0 +1,5 @@
+filekinds:
+  directory: { is_bold: false }
+
+users:
+  user_you: { is_bold: false }
