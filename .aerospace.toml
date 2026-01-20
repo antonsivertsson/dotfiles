@@ -56,10 +56,10 @@ automatically-unhide-macos-hidden-apps = false
 [gaps]
     inner.horizontal = 8
     inner.vertical =   8
-    outer.left =       [ { monitor.main = 8 }, { monitor."LU28R55" = 100 }, 8 ]
-    outer.bottom =     8
-    outer.top =        40
-    outer.right =       [ { monitor.main = 8 }, { monitor."LU28R55" = 100 }, 8 ]
+    outer.left =       [ { monitor.main = 8 }, { monitor."LU28R55" = 200 }, 8 ]
+    outer.bottom =     [ { monitor.main = 8 }, { monitor."LU28R55" = 100 }, 8 ]
+    outer.top =        [ { monitor.main = 40 }, { monitor."LU28R55" = 100 }, 40 ]
+    outer.right =       [ { monitor.main = 8 }, { monitor."LU28R55" = 200 }, 8 ]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
