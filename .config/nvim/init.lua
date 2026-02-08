@@ -8,3 +8,5 @@ require("config.lazy")
 
 vim.opt.exrc = true
 vim.opt.secure = true
+
+require("config.godot")
