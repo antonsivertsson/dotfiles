@@ -211,10 +211,6 @@ automatically-unhide-macos-hidden-apps = false
     shift-down = ['volume set 0', 'mode main']
 
 [[on-window-detected]]
-  if.app-id = 'com.apple.Safari'
-  run = 'move-node-to-workspace W'
-
-[[on-window-detected]]
   if.app-id = 'com.spotify.client'
   run = 'move-node-to-workspace Q'
 
@@ -223,9 +219,17 @@ automatically-unhide-macos-hidden-apps = false
   run = 'move-node-to-workspace Q'
 
 [[on-window-detected]]
-if.app-id = "md.obsidian"
-run = "move-node-to-workspace E"
+  if.app-id = 'com.apple.Safari'
+  run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = "app.zen-browser.zen"
 run = "move-node-to-workspace W"
+
+[[on-window-detected]]
+if.app-id = "md.obsidian"
+run = "move-node-to-workspace E"
+
+[[on-window-detected]]
+if.app-id = "net.kovidgoyal.kitty"
+run = "move-node-to-workspace S"
