@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.g.lazyvim_php_lsp = "intelephense"
+-- Disable animations by default
+vim.g.snacks_animate = false

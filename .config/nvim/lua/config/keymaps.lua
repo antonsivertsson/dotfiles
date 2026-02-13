@@ -35,6 +35,7 @@ end, { desc = "Toggle cmp autocomplete in current buffer" })
 -- Center screen when moving up down
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "G", "Gzz")
 
 -- Move highlighted lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
