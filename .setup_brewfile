@@ -1,5 +1,6 @@
 # Tap formulae
 tap "FelixKratz/formulae"
+tap "antonsivertsson/tap"
 
 # Install tools
 brew "bat"
@@ -18,6 +19,7 @@ brew "fzf"
 brew "fastfetch"
 brew "nvm"
 brew "lazysql"
+brew "typepipe" --fetch-HEAD
 
 # install apps
 cask "kitty"
