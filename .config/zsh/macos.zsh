@@ -17,19 +17,3 @@ unset __conda_setup
 # Created by `pipx` on 2025-08-06 04:12:06
 export PATH="$PATH:/Users/antonsivertsson/.local/bin"
 
-# Add shortcut integration for adding french translations in terminal
-fr() {
-  if [[ -z "$1" ]]; then
-    echo "Supply text to translate"
-  else
-    echo "$*" | shortcuts run "Translate French" | cat
-  fi
-}
-
-tofr() {
-  if [[ -z "$1" ]]; then
-    echo "Supply text to translate"
-  else
-    echo "$*" | shortcuts run "Translate To French" | cat
-  fi
-}

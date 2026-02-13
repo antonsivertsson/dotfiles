@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+if [ -t 0 ]; then
+  if [[ -z "$1" ]]; then
+    echo "Supply text to translate"
+  else
+    echo "$*" | shortcuts run "Translate French" | cat
+  fi
+else
+  input=$(cat)
+  echo "$input" | shortcuts run "Translate French" | cat
+fi

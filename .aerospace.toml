@@ -40,6 +40,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
+# Add additional paths
+[exec.env-vars]
+    PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${HOME}/.local/bin:${PATH}'
+
 # Possible values: (qwerty|dvorak|colemak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -133,7 +137,8 @@ automatically-unhide-macos-hidden-apps = true
     #alt-g = 'workspace G'
     #alt-i = 'workspace I'
     alt-m = ['move-workspace-to-monitor --workspace W secondary', 'move-workspace-to-monitor --workspace E secondary', 'move-workspace-to-monitor --workspace S secondary']
-    #alt-n = 'workspace N'
+    alt-enter = 'exec-and-forget zsh -c "typepipe -p \"Eng to Fr\" | tofr | pbcopy"'
+    alt-shift-enter = 'exec-and-forget zsh -c "typepipe -p \"Fr to Eng\" | fr | pbcopy"'
     #alt-o = 'workspace O'
     alt-o = 'fullscreen'
     #alt-p = 'workspace P'
