@@ -137,8 +137,8 @@ automatically-unhide-macos-hidden-apps = true
     #alt-g = 'workspace G'
     #alt-i = 'workspace I'
     alt-m = ['move-workspace-to-monitor --workspace W secondary', 'move-workspace-to-monitor --workspace E secondary', 'move-workspace-to-monitor --workspace S secondary']
-    alt-enter = 'exec-and-forget env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 zsh -c "typepipe -a -p \"Eng to Fr\" | tofr | pbcopy"'
-    alt-shift-enter = 'exec-and-forget env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 zsh -c "typepipe -a -p \"Fr to Eng\" | fr | pbcopy"'
+    alt-enter = 'exec-and-forget env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 zsh -c "typepipe -a -p \"Eng → Fr\" | tofr | pbcopy"'
+    alt-shift-enter = 'exec-and-forget env LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 zsh -c "typepipe -a -p \"Fr → Eng\" | fr | pbcopy"'
     #alt-o = 'workspace O'
     alt-o = 'fullscreen'
     #alt-p = 'workspace P'
@@ -239,7 +239,7 @@ automatically-unhide-macos-hidden-apps = true
   if.app-id = 'net.kovidgoyal.kitty'
   run = 'move-node-to-workspace S'
 
-# Auto assign to monitors on starup
+# Auto assign to monitors on startup
 [[on-window-detected]]
   if.during-aerospace-startup = true
   run = ['move-workspace-to-monitor --workspace W secondary', 'move-workspace-to-monitor --workspace E secondary', 'move-workspace-to-monitor --workspace S secondary']
