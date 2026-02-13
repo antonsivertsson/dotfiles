@@ -25,3 +25,11 @@ fr() {
     echo "$*" | shortcuts run "Translate French" | cat
   fi
 }
+
+tofr() {
+  if [[ -z "$1" ]]; then
+    echo "Supply text to translate"
+  else
+    echo "$*" | shortcuts run "Translate To French" | cat
+  fi
+}
