@@ -1,0 +1,5 @@
+out=$(typepipe -a -p "Fr → Eng")
+
+if [[ -n $out ]]; then
+  printf "$out" | fr | typepipe -a | pbcopy
+fi
