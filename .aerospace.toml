@@ -242,4 +242,8 @@ automatically-unhide-macos-hidden-apps = true
 # Auto assign to monitors on startup
 [[on-window-detected]]
   if.during-aerospace-startup = true
-  run = ['move-workspace-to-monitor --workspace W secondary', 'move-workspace-to-monitor --workspace E secondary', 'move-workspace-to-monitor --workspace S secondary']
+  run = [
+  'move-workspace-to-monitor --workspace W secondary',
+  'move-workspace-to-monitor --workspace E secondary',
+  'move-workspace-to-monitor --workspace S secondary'
+]
