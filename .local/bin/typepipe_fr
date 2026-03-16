@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 out=$(typepipe -a -p "Fr → Eng")
 
 if [[ -n $out ]]; then
