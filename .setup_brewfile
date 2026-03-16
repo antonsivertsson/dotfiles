@@ -19,7 +19,7 @@ brew "fzf"
 brew "fastfetch"
 brew "nvm"
 brew "lazysql"
-brew "typepipe" --fetch-HEAD
+brew "typepipe"
 
 # install apps
 cask "kitty"
