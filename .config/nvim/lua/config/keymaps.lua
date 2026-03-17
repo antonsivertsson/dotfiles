@@ -41,5 +41,24 @@ vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Open .config folder
+vim.keymap.set("n", "<leader>fC", function()
+  Snacks.picker("files", {
+    cwd = "~/.config",
+    exclude = {
+      "*.log",
+      "PureRef.ini",
+      "configstore/",
+      "fish/",
+      "elinks/",
+      "karabiner/",
+      "nchat/profiles",
+      "nchat/history",
+      "nchat/emojis",
+      "nchat/log*",
+    },
+  })
+end, { desc = "Find .config file" })
+
 -- Quick find and replace
 vim.keymap.set("n", "<leader>sf", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Quick replace" })
