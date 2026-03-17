@@ -215,6 +215,9 @@ automatically-unhide-macos-hidden-apps = true
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
 
+# -- Application to Workspace mappings --
+
+# Workspace Q
 [[on-window-detected]]
   if.app-id = 'com.spotify.client'
   run = 'move-node-to-workspace Q'
@@ -223,6 +226,7 @@ automatically-unhide-macos-hidden-apps = true
   if.app-id = 'com.apple.Music'
   run = 'move-node-to-workspace Q'
 
+# Workspace W
 [[on-window-detected]]
   if.app-id = 'com.apple.Safari'
   run = [ 'layout accordion horizontal', 'move-node-to-workspace W' ]
@@ -231,10 +235,12 @@ automatically-unhide-macos-hidden-apps = true
   if.app-id = 'app.zen-browser.zen'
   run = [ 'layout accordion horizontal', 'move-node-to-workspace W' ]
 
+# Workspace E
 [[on-window-detected]]
   if.app-id = "md.obsidian"
   run = 'move-node-to-workspace E'
 
+# Workspace S
 [[on-window-detected]]
   if.app-id = 'net.kovidgoyal.kitty'
   run = 'move-node-to-workspace S'
