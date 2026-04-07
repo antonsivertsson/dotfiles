@@ -10,6 +10,7 @@ alias ll='ls -lF'
 alias la='eza -al'
 alias l='eza -1 --group-directories-first'
 alias dotgit='lazygit -w ~ -g ~/.dotfiles'
+alias n='nvim'
 lsd() {
     if [[ "$1" =~ ^-[0-9]+$ ]]; then
         local depth=${1#-}  # Remove the dash and take the number as depth
