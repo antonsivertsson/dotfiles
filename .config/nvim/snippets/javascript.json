@@ -1,0 +1,20 @@
+{
+  "errclass": {
+    "prefix": "errclass",
+    "body": [
+      "export class ${1:MyCustom}Error extends Error {",
+      "  constructor() {",
+      "    super('${2:MyErrorMessage}')",
+      "    this.name = '${1:MyCustom}Error'",
+      "    this.code = '${3:MY_ERROR_CODE}'",
+      "  }",
+      "}"
+    ]
+  },
+  "arrow function": {
+    "prefix": "arrow",
+    "body": [
+      "(${1}) => ${2}"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "arrow function": {
+    "prefix": "arrow",
+    "body": [
+      "(${1}) => ${2}"
+    ]
+  }
+}
