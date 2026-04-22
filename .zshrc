@@ -26,3 +26,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   CONFIG_MACOS="$HOME/.config/zsh/macos.zsh"
   [[ -f "$CONFIG_MACOS" ]] && source "$CONFIG_MACOS"
 fi
+
+# pnpm
+export PNPM_HOME="/Users/antonsivertsson/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
