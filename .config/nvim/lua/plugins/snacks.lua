@@ -13,18 +13,10 @@ return {
           return LazyVim.pick(cmd, opts)()
         end,
         header = [[
-                                                                                         .         .           
-b.             8 8 8888888888       ,o888888o.  `8.`888b           ,8'  8 8888          ,8.       ,8.          
-888o.          8 8 8888          . 8888     `88. `8.`888b         ,8'   8 8888         ,888.     ,888.         
-Y88888o.       8 8 8888         ,8 8888       `8b `8.`888b       ,8'    8 8888        .`8888.   .`8888.        
-.`Y888888o.    8 8 8888         88 8888        `8b `8.`888b     ,8'     8 8888       ,8.`8888. ,8.`8888.       
-8o. `Y888888o. 8 8 888888888888 88 8888         88  `8.`888b   ,8'      8 8888      ,8'8.`8888,8^8.`8888.      
-8`Y8o. `Y88888o8 8 8888         88 8888         88   `8.`888b ,8'       8 8888     ,8' `8.`8888' `8.`8888.     
-8   `Y8o. `Y8888 8 8888         88 8888        ,8P    `8.`888b8'        8 8888    ,8'   `8.`88'   `8.`8888.    
-8      `Y8o. `Y8 8 8888         `8 8888       ,8P      `8.`888'         8 8888   ,8'     `8.`'     `8.`8888.   
-8         `Y8o.` 8 8888          ` 8888     ,88'        `8.`8'          8 8888  ,8'       `8        `8.`8888.  
-8            `Yo 8 888888888888     `8888888P'           `8.`           8 8888 ,8'         `         `8.`8888. 
-]],
+ (\(\
+ (._.)
+c(___)
+        ]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
         keys = {
@@ -37,6 +29,40 @@ Y88888o.       8 8 8888         ,8 8888       `8b `8.`888b       ,8'    8 8888  
           { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
           { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+        },
+      },
+      sections = {
+        { section = "header" },
+        { section = "keys", padding = 1 },
+        { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        {
+          section = "terminal",
+          icon = " ",
+          key = "o",
+          enabled = false,
+          action = function()
+            vim.fn.system("obsidian daily")
+          end,
+          title = "Todo",
+          pane = 2,
+          cmd = "obsidian tasks todo daily | awk 'NR<=5 {print} NR==6 {print \"...\"; exit}'",
+          height = 6,
+          padding = 1,
+          ttl = 5 * 60,
+        },
+        {
+          pane = 2,
+          icon = " ",
+          title = "Git Status",
+          section = "terminal",
+          enabled = function()
+            return Snacks.git.get_root() ~= nil
+          end,
+          cmd = "git status --short --branch --renames",
+          height = 5,
+          padding = 1,
+          ttl = 5 * 60,
+          indent = 3,
         },
       },
     },
