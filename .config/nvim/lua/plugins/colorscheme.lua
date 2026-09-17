@@ -18,11 +18,38 @@ return {
       -- })
     end,
   },
+  {
+    "Shatur/neovim-ayu",
+    config = function()
+      require("ayu").setup({
+        overrides = {
+          WinSeparator = { link = "Title" },
+        },
+      })
+    end,
+    -- opts = {
+    --   overrides = {
+    --     WinSeparator = { fg = "#aaaaaa", bg = "#F5D098" },
+    --   },
+    -- },
+  },
+  {
+    "everviolet/nvim",
+    name = "evergarden",
+    priority = 1000,
+    opts = {
+      overrides = {
+        Search = { fg = "#171C1F", bg = "#F5D098" },
+        IncSearch = { fg = "#171C1F", bg = "#7fbbb3" },
+        Substitute = { fg = "#171C1F", bg = "#F57F82" },
+      },
+    },
+  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "everforest",
+      colorscheme = "ayu-dark",
     },
   },
 }
