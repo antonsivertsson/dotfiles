@@ -3,6 +3,7 @@ source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlight
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-z/zsh-z.plugin.zsh
 eval "$(direnv hook zsh)"  # For Zsh
+
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 export EZA_CONFIG_DIR="$HOME/.config/eza/"
 alias ls='eza -H --group-directories-first --git'
@@ -11,6 +12,16 @@ alias la='eza -al'
 alias l='eza -1 --group-directories-first'
 alias dotgit='lazygit -w ~ -g ~/.dotfiles'
 alias n='nvim'
+
+# yt-dlp
+ytaac() {
+  if [[ -n "$2" ]]; then
+    yt-dlp --no-playlist -o "~/mprod/samples/yt/%(title)s.%(ext)s" -t aac --download-sections "$2" "$1"
+  else
+    yt-dlp --no-playlist -o "~/mprod/samples/yt/%(title)s.%(ext)s" -t aac "$1"
+  fi
+}
+
 lsd() {
     if [[ "$1" =~ ^-[0-9]+$ ]]; then
         local depth=${1#-}  # Remove the dash and take the number as depth

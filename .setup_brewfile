@@ -20,6 +20,7 @@ brew "fastfetch"
 brew "nvm"
 brew "lazysql"
 brew "typepipe"
+brew "yt-dlp"
 
 # install apps
 cask "kitty"
