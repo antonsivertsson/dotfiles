@@ -9,9 +9,11 @@ echo " MacOS setup"
 
 xcode-select --install
 
-# Installing uv
-
+# Installing python tools
+echo "Installing python toolchain"
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+uv tool install --python 3.13 posting
 
 # Setting up homebrew
 
