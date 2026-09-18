@@ -67,4 +67,13 @@ c(___)
       },
     },
   },
+  keys = {
+    {
+      "<leader>cp",
+      function()
+        Snacks.terminal.toggle("posting")
+      end,
+      desc = "Posting",
+    },
+  },
 }
