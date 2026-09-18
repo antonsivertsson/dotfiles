@@ -9,6 +9,10 @@ echo " MacOS setup"
 
 xcode-select --install
 
+# Installing uv
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Setting up homebrew
 
 if ! command_exists brew; then
