@@ -40,3 +40,5 @@ dap.configurations.typescript = {
     sourceMaps = true,
   },
 }
+
+return {}
