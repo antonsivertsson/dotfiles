@@ -1,0 +1,7 @@
+{
+  "Insert Bug": {
+    "prefix": "bug",
+    "body": "> [!BUG]\n> ",
+    "description": "Insert Bug"
+  }
+}
