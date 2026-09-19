@@ -75,5 +75,14 @@ c(___)
       end,
       desc = "Posting",
     },
+    {
+      "<leader>s.",
+      function()
+        Snacks.scratch.open({
+          ft = "markdown",
+        })
+      end,
+      desc = "Project notes",
+    },
   },
 }
