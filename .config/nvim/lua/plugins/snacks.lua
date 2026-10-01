@@ -87,6 +87,10 @@ c(___)
       function()
         Snacks.scratch.open({
           ft = "markdown",
+          win = {
+            position = "right",
+            width = 0.4,
+          },
         })
       end,
       desc = "Project notes",
