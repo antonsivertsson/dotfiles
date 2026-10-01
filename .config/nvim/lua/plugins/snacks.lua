@@ -76,6 +76,13 @@ c(___)
       desc = "Posting",
     },
     {
+      "<leader>sP",
+      function()
+        Snacks.picker.projects()
+      end,
+      desc = "Projects",
+    },
+    {
       "<leader>s.",
       function()
         Snacks.scratch.open({
