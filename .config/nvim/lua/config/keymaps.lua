@@ -36,6 +36,8 @@ end, { desc = "Toggle cmp autocomplete in current buffer" })
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "G", "Gzz")
+vim.keymap.set("n", "}", "}zz")
+vim.keymap.set("n", "{", "{zz")
 
 -- Move highlighted lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
