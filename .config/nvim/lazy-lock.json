@@ -81,5 +81,6 @@
   "vim-godot": { "branch": "master", "commit": "2cecd0c83a7b3f012142a584d53a3a51be246c8e" },
   "vim-visual-multi": { "branch": "master", "commit": "a6975e7c1ee157615bbc80fc25e4392f71c344d4" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
-  "yanky.nvim": { "branch": "main", "commit": "4b4ddd196526fd3d6fd091d931810f9743e936d3" }
+  "yanky.nvim": { "branch": "main", "commit": "4b4ddd196526fd3d6fd091d931810f9743e936d3" },
+  "zen-mode.nvim": { "branch": "main", "commit": "8564ce6d29ec7554eb9df578efa882d33b3c23a7" }
 }
