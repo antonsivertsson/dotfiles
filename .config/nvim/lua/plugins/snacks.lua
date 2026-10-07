@@ -1,6 +1,13 @@
 return {
   "folke/snacks.nvim",
   opts = {
+    picker = { win = {
+      input = {
+        keys = {
+          ["<C-h>"] = "toggle_hidden",
+        },
+      },
+    } },
     explorer = { enabled = false }, -- Disable explorer
     indent = {
       indent = {
