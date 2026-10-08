@@ -43,6 +43,17 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Add todo objects quick in markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.keymap.set("i", "<D-l>", "- [ ] ", {
+      buffer = true,
+      desc = "Insert TODO item",
+    })
+  end,
+})
+
 -- Open .config folder
 vim.keymap.set("n", "<leader>fC", function()
   Snacks.picker("files", {
