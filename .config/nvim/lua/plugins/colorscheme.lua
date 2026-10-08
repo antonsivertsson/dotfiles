@@ -14,7 +14,7 @@ return {
     "neanias/everforest-nvim",
     config = function()
       require("everforest").setup({
-        transparent_background_level = 2,
+        --- transparent_background_level = 2,
         on_highlights = function(hl, palette)
           hl.WinSeparator = { fg = palette.orange }
           hl.DiagnosticUnderlineWarn = { undercurl = true, sp = palette.orange }
@@ -24,6 +24,7 @@ return {
         end,
         colours_override = function(palette)
           palette.fg = "#CCCAC2"
+          palette.bg0 = "#171C1F"
           palette.red = "#FF6666"
           palette.orange = "#FFA759"
           palette.yellow = "#FFD173"
