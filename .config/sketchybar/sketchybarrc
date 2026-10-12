@@ -26,10 +26,10 @@ WORKSPACES=("Q" "W" "E" "A" "S" "D")
 for sid in "${WORKSPACES[@]}"; do
   case "$sid" in
         "Q") ICON="" ;;
-        "W") ICON="" ;;
-        "E") ICON="󰠮" ;;
+        "W") ICON="󰖟" ;;
+        "E") ICON="󰼭" ;;
         "A") ICON="󰆍" ;;
-        "S") ICON="" ;;
+        "S") ICON="󰘧" ;;
         "D") ICON="󰘨" ;;
         *) ICON="$sid" ;;
     esac

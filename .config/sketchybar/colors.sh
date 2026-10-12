@@ -1,5 +1,5 @@
 export BAR_COLOR=0x55000000
-export ITEM_BG_COLOR=0x44ffe1a4
-export ICON_COLOR=0xffffe1a4
-export LABEL_COLOR=0xffffe1a4
+export ITEM_BG_COLOR=0x445ccfe6
+export ICON_COLOR=0xff5ccfe6
+export LABEL_COLOR=0xff5ccfe6
 export ACCENT_COLOR=0xff007aff
