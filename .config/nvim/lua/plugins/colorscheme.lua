@@ -14,13 +14,19 @@ return {
     "neanias/everforest-nvim",
     config = function()
       require("everforest").setup({
-        --- transparent_background_level = 2,
+        transparent_background_level = 2,
         on_highlights = function(hl, palette)
-          hl.WinSeparator = { fg = palette.orange }
+          hl.WinSeparator = { fg = palette.blue }
           hl.DiagnosticUnderlineWarn = { undercurl = true, sp = palette.orange }
           hl.DiagnosticUnderlineError = { undercurl = true, sp = palette.red }
           hl.DiagnosticUnderlineHint = { undercurl = true, sp = palette.purple }
           hl.DiagnosticHint = { fg = palette.blue }
+          hl.RenderMarkdownH1Bg = { bg = palette.blue, fg = palette.bg0, bold = false }
+          hl.RenderMarkdownH2Bg = { bg = palette.statusline1, fg = palette.bg0, bold = false }
+          hl.RenderMarkdownH3Bg = { bg = palette.purple, fg = palette.bg0, bold = false }
+          hl.RenderMarkdownH4Bg = { bg = palette.aqua, fg = palette.bg0, bold = false }
+          hl.RenderMarkdownH5Bg = { bg = palette.green, fg = palette.bg0, bold = false }
+          hl.RenderMarkdownH6Bg = { bg = palette.statusline2, fg = palette.bg0, bold = false }
         end,
         colours_override = function(palette)
           palette.fg = "#CCCAC2"
@@ -35,8 +41,8 @@ return {
           palette.grey0 = "#7a8478"
           palette.grey1 = "#859289"
           palette.grey2 = "#9da9a0"
-          palette.statusline1 = "#a7c080"
-          palette.statusline2 = "#d3c6aa"
+          palette.statusline1 = "#5CCFE6"
+          palette.statusline2 = "#D5FF80"
           palette.statusline3 = "#F28779"
           palette.bg2 = "#1F2430"
         end,
