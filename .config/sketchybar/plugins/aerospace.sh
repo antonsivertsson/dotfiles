@@ -5,7 +5,7 @@ source "$CONFIG_DIR/colors.sh"
 FOCUSED=$(aerospace list-workspaces --focused)
 
 if [ "$1" = "$FOCUSED" ]; then
-  sketchybar --set "space.$1" background.color=$ITEM_BG_COLOR
+  sketchybar --set "space.$1" icon.color=$ICON_COLOR
 else
-  sketchybar --set "space.$1" background.color=0x00000000
+  sketchybar --set "space.$1" icon.color=$ITEM_INACTIVE_COLOR
 fi
